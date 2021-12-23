@@ -1,0 +1,19 @@
+main {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    p{
+        position: relative;
+        z-index: 2;
+        padding: 15px;
+        font-weight: bold;
+    }
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0.4;
+    }
+}
