@@ -11,12 +11,14 @@ import { CommonModule } from '@angular/common';
  * Import Project's Modules
  */
 import { HomeModule } from './home/home.module';
+import { CoopModule } from './coop/coop.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    HomeModule
+    HomeModule,
+    CoopModule
   ]
 })
 

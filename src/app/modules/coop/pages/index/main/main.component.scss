@@ -1,0 +1,23 @@
+
+a {
+    color: blanchedalmond;
+    text-decoration: none;
+}
+.btn {
+    border: 1px solid;
+    border-radius: 7px;
+    margin-right: 10px;
+    padding: 3px 10px;
+    color: blanchedalmond;
+    &-info {
+        background-color: mediumseagreen;
+        border-color: mediumseagreen;
+    }
+    &-primary {
+        background-color: #4040c5;
+        border-color: #4040c5;
+    }
+    &-danger {
+        background-color: #df6161;
+    }
+}

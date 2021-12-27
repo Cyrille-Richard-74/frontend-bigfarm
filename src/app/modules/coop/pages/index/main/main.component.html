@@ -1,0 +1,44 @@
+<main>
+    <p>main works!</p>
+    <button class="btn btn-success">
+        <a routerLink="create/">Create New Coop</a>
+    </button>
+
+    <table>
+        <caption>Liste de Coops</caption>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nom</th>
+                <th>Niveau</th>
+                <th>Joueurs</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let coop of coops">
+            <td>{{ coop.id }}</td>
+            <td>{{ coop.name }}</td>
+            <td>{{ coop.level }}</td>
+            <td></td>
+            <td>
+                <button class="btn btn-info">
+                    <a href="#" [routerLink]="['/coops/', coop.id]">View</a>
+                </button>
+                <button class="btn btn-primary">
+                    <a href="#" [routerLink]="['/coops/', coop.id, 'edit']">Edit</a>
+                </button>
+
+                <button type="button" (click)="deleteCoop(coop.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- <ul>
+        <li *ngFor="let coop of coops">
+            <p>{{coop.name}}</p>
+            <a href="#" [routerLink]="['/coop/', coop.id, 'view']" class="btn btn-info">View</a>
+            <a href="#" [routerLink]="['/coop/', coop.id, 'edit']" class="btn btn-primary">Edit</a>
+            <button type="button" (click)="deleteCoop(coop.id)" class="btn btn-danger">Delete</button>
+        </li>
+    </ul> -->
+</main>

@@ -1,0 +1,36 @@
+<div>
+    <h1>Créer une nouvelle coop</h1>
+    <button class="btn btn-primary">
+        <a routerLink="/coops">Retour</a>
+    </button>
+
+
+
+</div>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div>
+        <label for="name">Nom:</label>
+        <input formControlName="name" id="name" type="text">
+        <div *ngIf="f['name'].touched && f['name'].invalid"></div>
+        <div *ngIf="f['name'].errors && f['name'].errors['required']">
+            Le nom est requis
+        </div>
+    </div>
+    <div>
+        <label for="level">Niveau:</label>
+        <input formControlName="level" id="level" type="number">
+        <div *ngIf="f['level'].touched && f['level'].invalid"></div>
+        <div *ngIf="f['level'].errors && f['level'].errors['required']">
+            Le niveau est requis
+        </div>
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <input formControlName="description" id="description" type="text">
+        <div *ngIf="f['description'].touched && f['description'].invalid"></div>
+        <div *ngIf="f['description'].errors && f['description'].errors['required']">
+            La description est requise
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+</form>
