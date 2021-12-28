@@ -9,4 +9,5 @@ export interface CoopInterface {
     name: string
     level: number
     description: string
+    players: string
 }

@@ -12,13 +12,15 @@ import { CommonModule } from '@angular/common';
  */
 import { HomeModule } from './home/home.module';
 import { CoopModule } from './coop/coop.module';
+import { PlayerModule } from './player/player.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     HomeModule,
-    CoopModule
+    CoopModule,
+    PlayerModule
   ]
 })
 

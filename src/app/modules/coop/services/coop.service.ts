@@ -12,7 +12,6 @@ import { Observable, throwError, catchError } from 'rxjs';
  * Import Project's Interfaces
  */
 import { CoopInterface } from '../interfaces/coop';
-
 @Injectable({
   providedIn: 'root'
 })
